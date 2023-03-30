@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Putaoge/Twice-Store/static/css/main.26f23632.css",
-    "main.js": "/Putaoge/Twice-Store/static/js/main.339da6df.js",
-    "static/media/2.jpg": "/Putaoge/Twice-Store/static/media/2.926832126c4fcba53877.jpg",
-    "static/media/3.jpg": "/Putaoge/Twice-Store/static/media/3.b709fafddf6ac8faa8e9.jpg",
-    "index.html": "/Putaoge/Twice-Store/index.html",
-    "main.26f23632.css.map": "/Putaoge/Twice-Store/static/css/main.26f23632.css.map",
-    "main.339da6df.js.map": "/Putaoge/Twice-Store/static/js/main.339da6df.js.map"
+    "main.css": "./static/css/main.1ddcf1f1.css",
+    "main.js": "./static/js/main.339da6df.js",
+    "static/media/2.jpg": "./static/media/2.926832126c4fcba53877.jpg",
+    "static/media/3.jpg": "./static/media/3.b709fafddf6ac8faa8e9.jpg",
+    "index.html": "./index.html",
+    "main.1ddcf1f1.css.map": "./static/css/main.1ddcf1f1.css.map",
+    "main.339da6df.js.map": "./static/js/main.339da6df.js.map"
   },
   "entrypoints": [
-    "static/css/main.26f23632.css",
+    "static/css/main.1ddcf1f1.css",
     "static/js/main.339da6df.js"
   ]
 }
