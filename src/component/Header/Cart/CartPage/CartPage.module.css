@@ -1,0 +1,175 @@
+.CartBox {
+  position: fixed;
+  right: -2%;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 25%;
+  min-width: 300px;
+  background-color: #ee61a2;
+  animation: show 0.5s 1 ease-in-out;
+  border: 2px solid #000;
+  padding: 10px;
+  z-index: 10;
+  transition: .3s;
+}
+
+.Header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+
+
+@keyframes show {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+.Hide {
+  animation: leave 0.5s 1 ease-out;
+}
+
+@keyframes leave {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(120%, 0, 0);
+  }
+}
+
+.Exit,.Trash {
+  cursor: pointer;
+  /* position: absolute;
+  right: 0px;
+  top: 0; */
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  transition: .3s;
+}
+.Exit:hover{
+  transform: rotate3d(0,0,1,90deg);
+}
+
+.Trash{
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.Trash:hover{
+  color: #000;
+}
+
+/* .Header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+.Title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+
+.CartList{
+  max-height: 70%;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.Footer{
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.Price{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.Tips {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Soleil", Arial, Helvetica, Sans-Serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+
+}
+.TotalPrice{
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* .CheckOut {
+} */
+.CheckOut {
+  width: 80%;
+  margin: auto;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  font-weight: 900;
+  color: #ee61a2;
+  background-color: #fff;
+  transition: .3s;
+  cursor: pointer;
+  line-height: 50px;
+  padding: 0 20px;
+  text-align: center;
+  /* margin: 20px 0 40px 0; */
+  user-select: none;
+}
+
+.CheckOut:hover {
+  background-color: #000;
+}
+
+
+
+
+@media screen and (max-width:1200px) {
+  .CartBox {
+      right: 0px;
+    }
+}
+
+@media screen and (max-width:481px) {
+  .CartBox {
+
+      right: 0px;
+      width: 100%;
+    }
+}

@@ -1,0 +1,29 @@
+.CountBox{
+  color: #ee61a2;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.Num{
+  font-size: 26px;
+  color: #000;
+  user-select: none;
+}
+
+.Btn{
+  cursor: pointer;
+}
+
+.BtnInCart,.NumInCart{
+  color: #fff;
+  cursor: pointer;
+  transition: .2s;
+}
+.BtnInCart{
+  font-size: 18px;
+}
+.BtnInCart:hover{
+  color: #000;
+}

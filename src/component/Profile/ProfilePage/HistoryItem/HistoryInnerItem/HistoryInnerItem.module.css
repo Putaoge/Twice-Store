@@ -1,0 +1,35 @@
+.InnerItemBox {
+  display: flex;
+  border-bottom: 1px dashed #000;
+  align-items: flex-start;
+  padding: 5px 0;
+}
+
+.Picture {
+  width: 15%;
+  aspect-ratio: 1/1;
+}
+
+.Content {
+  flex: auto;
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+  font-size: 13px;
+  line-height: 1.2;
+  padding: 10px;
+
+}
+
+.Title {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+
+.Amount, .Price{
+  align-self: flex-end;
+}

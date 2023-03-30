@@ -1,0 +1,58 @@
+.ItemBox{
+  position: relative;
+  box-shadow: 0 0 7px 2px #0000002b;
+  
+  border-radius: 5px;
+  padding: 20px 10px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.PlaySoundBtn{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-align: center;
+  transform: rotate3d(0,0,1,-10deg);
+  font-size: 30px;
+  cursor: pointer;
+  color: #ee61a2;
+}
+.PlaySoundBtn:hover{
+  animation: shake 1s infinite;
+}
+@keyframes shake {
+  0%{
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  10%{
+    transform: rotate3d(0, 0, 1, -20deg);
+  }
+  20%{
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  30%{
+    transform: rotate3d(0, 0, 1, -20deg);
+  }
+  40%{
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  50%{
+    transform: rotate3d(0, 0, 1, -20deg);
+  }
+  60%{
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+}
+
+.Time{
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.ItemList{
+  margin-bottom: 20px;
+}
+
+.Address{
+  line-height: 1.4;
+}

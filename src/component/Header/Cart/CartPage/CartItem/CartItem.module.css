@@ -1,0 +1,44 @@
+.CartItem {
+  color: #fff;
+  /* font-size: 100%; */
+  line-height: 1.6;
+  font-family: "Soleil", Arial, Helvetica, Sans-Serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  /* -webkit-text-size-adjust: 100%; */
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+  margin: 20px 0;
+}
+.Tips{
+  color: #fff;
+  width: 60%;
+}
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 10px 0;
+
+}
+
+.Count {
+  width: 70%;
+  /* padding: 5px 0; */
+}
+.Title,.Price{
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+.Title,.ProductImg{
+  transition: .1s;
+  cursor: pointer;
+}
+.Title:hover,.ProductImg:hover{
+  opacity: .6;
+}

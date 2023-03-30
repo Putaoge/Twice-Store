@@ -1,0 +1,211 @@
+.LoginBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 360px;
+  height: 640px;
+  background-color: #fff;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px 2px #0000003f; */
+  box-shadow: 0 0 10px 2px #00000058;
+  overflow: hidden;
+
+  /* background: url('../../../public/images/login/login.jpg') no-repeat center center/cover; */
+  /* background: url('../../../public/images/login/signup.jpg') no-repeat center center/cover; */
+
+
+  animation-name: box-appear;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes box-appear {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, -20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+.BoxLeave {
+  animation-name: box-leave;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes box-leave {
+  0% {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, -100%, 0);
+  }
+}
+
+.Exit {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  transition: .2s;
+}
+
+.Exit:hover {
+  transform: rotate3d(0, 0, 1, 90deg);
+}
+
+.LoginPage {
+  position: relative;
+  gap: 40px;
+  width: 100%;
+  background: url('../../../public/images/login/3.jpg') no-repeat center center/cover;
+}
+
+.SignupPage {
+  position: relative;
+  gap: 40px;
+  width: 100%;
+  background: url('../../../public/images/login/2.jpg') no-repeat center center/cover;
+}
+
+.ContainBox {
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: 200%;
+  height: 100%;
+  transition: .3s;
+}
+
+.GoSignup {
+  transform: translate3d(-50%, 0, 0);
+}
+
+
+.Title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  font-size: 35px;
+  color: #fff;
+
+  text-align: center;
+}
+
+.LoginBox,
+.BtnBox,
+.LoginPage,
+.SignupPage,
+.InputBox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.InputBox {
+  opacity: .95;
+  gap: 20px;
+  margin-top: 80px;
+  width: 100%;
+
+}
+
+.InputBox label {
+  /* width: 80px; */
+  width: 25%;
+  display: inline-block;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  margin-right: 5px;
+}
+.InputItemBox{
+  width: 100%;
+}
+
+.InputBox input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 65%;
+  padding: 5px;
+  line-height: 22px;
+  /* text-align: center; */
+  text-indent: 2em;
+}
+
+.BtnBox button {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+  background-color: #00000099;
+  transition: .3s;
+  cursor: pointer;
+  line-height: 40px;
+  padding: 0 40px;
+  user-select: none;
+  border-radius: 5px;
+
+}
+
+.BtnBox {
+  gap: 10px;
+}
+
+.BtnBox button:hover {
+  background-color: #ee61a2;
+}
+
+/* 
+  警示
+  登入時: 未找到用戶 / 密碼錯誤
+  註冊時: 用戶已存在
+*/
+.WarningTips {
+  position: absolute;
+  top: 12%;
+  /* 
+  left: 0%;
+  transform: translate3d(-50%, 0, 0); */
+  background-color: #ffffff3f;
+  width: 100%;
+  line-height: 45px;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  user-select: none;
+
+  animation: appear .2s 1 ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+
+}

@@ -1,0 +1,71 @@
+.ProductBox{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.ProductBox img{
+  width: 60%;
+}
+
+.Details {
+  width: 30%;
+}
+
+.Title,.Price{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 2;
+}
+.Title{
+  font-size: 20px;
+}
+
+
+
+.AddToCart{
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  background-color: #ee61a2;
+  transition: .3s;
+  cursor: pointer;
+  line-height: 40px;
+  padding: 0 20px;
+  margin: 20px 0 40px 0;
+  user-select: none;
+}
+.AddToCart:hover{
+  background-color: #000;
+}
+
+/* .ArticleList{
+  margin
+} */
+.ArticleList li{
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+@media screen and (max-width:769px) {
+  .ProductBox{
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+    .ProductBox img,.Details {
+      width: 90%;
+    }
+  
+    .Details {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+}

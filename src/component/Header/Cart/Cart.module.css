@@ -1,0 +1,61 @@
+.PcCart,
+.MobileCart {
+  position: absolute;
+  right: 90px;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  font-size: 16px;
+
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+
+}
+
+.MobileCart {
+  display: none;
+  font-size: 24px;
+  color: #ee61a2;
+}
+
+.CartCount {
+  position: absolute;
+  display: inline-block;
+  top: -80%;
+  left: -70%;
+  border-radius: 50%;
+  /* width: fit-content; */
+  min-width: 18px;
+
+  /* aspect-ratio: 1/1; */
+  block-size: fit-content;
+  padding: 3px;
+  text-align: center;
+  font-size: 12px;
+  
+  color: #fff;
+  background-color: #ee61a2;
+  font-weight: 400;
+}
+
+
+.PcCart:hover {
+  color: #ee61a2;
+}
+
+
+@media screen and (max-width:769px) {
+  .PcCart {
+    display: none;
+  }
+
+  .MobileCart {
+    display: block;
+  }
+}
+
+@media screen and (max-width:481px) {
+  /* .ProductItem {
+    width: 95%;
+  } */
+}

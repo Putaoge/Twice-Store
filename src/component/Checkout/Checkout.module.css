@@ -1,0 +1,161 @@
+.ConfirmBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 90%;
+  max-height: 70vh;
+  /* overflow-y: scroll; */
+  max-width: 450px;
+  /* height: 40%; */
+  background-color: #fff;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px 2px #0000003f; */
+  box-shadow: 0 0 5px 2px #00000058;
+  overflow: hidden;
+
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  padding: 20px 5px;
+  /* background: url('../../../public/images/login/login.jpg') no-repeat center center/cover; */
+  /* background: url('../../../public/images/login/signup.jpg') no-repeat center center/cover; */
+  /* animation: box-appear 1 ease-in-out; */
+  animation-name: box-appear;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes box-appear {
+  0% {
+    opacity: 0;
+    /* transform: translate3d(-50%, -20%, 0); */
+    transform: translate3d(-50%, -50%, 0) scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    /* transform: translate3d(-50%, -50%, 0); */
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+}
+
+.BoxLeave {
+  /* animation: box-leave 1; */
+  animation-name: box-leave;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes box-leave {
+  0% {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(0.5);
+  }
+}
+.TotalPrice{
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.AddressBox{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.InputBox {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.ChangeBtn {
+  min-width: 60px;
+  border: none;
+  outline: none;
+  /* font-size: 22px; */
+  font-weight: 900;
+  /* color: #ee61a2; */
+  /* background-color: #fff; */
+  transition: .3s;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  /* margin: 20px 0 40px 0; */
+  user-select: none;
+  border-radius: 5px;
+  transition: .3s;
+}
+.ChangeBtn:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+.ShowAddress{
+  display: block;
+  line-height: 1.6;
+  width: 100%;
+  margin: auto;
+  word-break: break-all;
+}
+
+.BtnBox{
+display: flex;
+width: 100%;
+gap: 20px;
+justify-content: flex-end;
+align-items: flex-end;
+}
+
+.CancelBtn,.ConfirmBtn{
+min-width: 60px;
+  border: none;
+  outline: none;
+  /* font-size: 22px; */
+  font-weight: 900;
+  /* color: #ee61a2; */
+  background-color: #000;
+  color: #fff;
+  transition: .3s;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+  /* margin: 20px 0 40px 0; */
+  padding: 0 10px;
+  user-select: none;
+  border-radius: 5px;
+  transition: .3s;
+}
+.ConfirmBtn{
+  background-color: #ee61a2;
+  color: #fff;
+}
+.ConfirmBtn:hover{
+  background-color: #fff;
+    color: #ee61a2;
+}
+
+
+.CancelBtn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.ChangeInput{
+  /* flex: auto; */
+  /* min-width: 60%; */
+
+}

@@ -1,0 +1,425 @@
+.ProfileBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 95%;
+  height: 95%;
+  /* max-width: 450px; */
+  overflow-y: scroll;
+
+  background-color: #ffffffdd;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px 2px #0000003f; */
+  box-shadow: 0 0 5px 2px #00000058;
+  /* overflow: hidden; */
+
+  /* backdrop-filter: invert(200%) hue-rotate(110deg); */
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background: url('../../../public/images/login/login.jpg') no-repeat center center/cover; */
+  /* background: url('../../../public/images/login/signup.jpg') no-repeat center center/cover; */
+  /* animation: box-appear .3s 1 ease-in-out; */
+
+  animation-name: box-appear;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+
+}
+
+@keyframes box-appear {
+  0% {
+    opacity: 0;
+    /* transform: translate3d(-50%, -20%, 0); */
+    transform: translate3d(-50%, -50%, 0) scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    /* transform: translate3d(-50%, -50%, 0); */
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+}
+
+.BoxLeave {
+  /* animation: box-leave .3s 1 ease-in-out; */
+  animation-name: box-leave;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes box-leave {
+  0% {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(0.5);
+  }
+}
+
+
+.Exit,
+.Logout {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  right: 0px;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  text-align: center;
+  color: #000;
+  transition: .2s;
+}
+
+.Logout {
+  /* right: 20px; */
+  left: 10px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+}
+
+.Logout:hover {
+  color: #ee61a2;
+}
+
+.Exit:hover {
+  transform: rotate3d(0, 0, 1, 90deg);
+  color: #ee61a2;
+}
+
+.Avatar {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  max-width: 300px;
+  width: 40%;
+  aspect-ratio: 1/1;
+  margin: 30px auto;
+
+  box-shadow: 0px 0px 5px 5px #ffffff,
+    0px 0px 16px 20px #ffffff;
+}
+
+.InfoBox,
+.HistoryBox {
+  position: relative;
+  width: 49%;
+  max-height: 95%;
+  overflow-y: scroll;
+  transition: .3s;
+}
+
+.HistoryBox {
+  /* align-self: flex-start; */
+  /* padding: 40px; */
+  padding: 20px 40px 20px 20px;
+  align-self: flex-start;
+}
+
+.Title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.DefaultInfo {
+  position: relative;
+  box-shadow: 0 0 7px 2px #0000002b;
+
+  border-radius: 5px;
+  padding: 20px 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  gap: 20px;
+
+}
+
+.DefaultInfo img {
+  width: 80%;
+  margin: auto;
+  border-radius: 30px;
+  user-select: none;
+
+}
+
+.InfoContainer {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 90%;
+  margin: auto;
+}
+
+.ChangeBtn {
+  position: absolute;
+  right: 3%;
+  cursor: pointer;
+  top: -40px;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+  transition: .2s;
+}
+
+.ChangeBtn:hover {
+  transform: rotate3d(0, 0, 1, 180deg);
+  color: #ee61a2;
+}
+
+.InfoList,
+.ChangeList {
+  width: 100%;
+  /* font-size: 20px; */
+  line-height: 1.6;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
+  box-shadow: 1px 1px 20px 2px #00000047;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* .InfoList{
+} */
+
+.ChangeBox {
+  width: 100%;
+}
+
+.ChangeList {
+  gap: 10px;
+}
+
+.InfoInput {
+  outline: none;
+  border: 1px dashed #000;
+  /* padding: 0 15px; */
+  text-indent: 1em;
+}
+
+.InputAddress {
+  width: 60%;
+  resize: none;
+  outline: none;
+  border: 1px dashed #000;
+  padding: 0 15px;
+  text-indent: 1em;
+}
+
+.SubmitBox {
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.CancelBtn,
+.ConfirmBtn {
+  min-width: 60px;
+  border: none;
+  outline: none;
+  /* font-size: 22px; */
+  font-weight: 900;
+  /* color: #ee61a2; */
+  /* background-color: #fff; */
+  transition: .3s;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+  /* margin: 20px 0 40px 0; */
+  padding: 0 10px;
+  user-select: none;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.ConfirmBtn {
+  background-color: #ee61a2;
+  color: #fff;
+}
+
+.ConfirmBtn:hover {
+  background-color: #fff;
+  color: #ee61a2;
+}
+
+
+.CancelBtn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.InfoList li,
+.ChangeList li {
+  width: 100%;
+  display: flex;
+
+}
+
+.Desc {
+  width: 35%;
+  max-width: 120px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.Balance {
+  font-size: 36px;
+  color: #011F26;
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  margin: 20px 0;
+  box-shadow: 1px 1px 20px 2px #00000047;
+  padding: 10px;
+  border-radius: 10px;
+  /* white-space: nowrap; */
+  transition: .3s;
+}
+
+.ShowInfo {
+  display: inline-block;
+  line-height: 1.6;
+  width: 70%;
+  /* padding: 0 15px; */
+  /* margin: auto; */
+  word-break: break-all;
+}
+
+.ShowAddress {
+  display: inline-block;
+  line-height: 1.8;
+  width: 70%;
+  /* padding: 0 15px; */
+  /* margin: auto; */
+  word-break: break-all;
+}
+
+/* 歷史購買記錄 */
+.HistoryList {
+  width: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+
+
+
+@media screen and (max-width:1000px) {
+
+  .InfoList,
+  .ChangeList {
+    font-size: 18px;
+  }
+
+  .Balance {
+    font-size: 26px;
+  }
+
+  .InfoContainer {
+    width: 90%;
+  }
+
+  .HistoryBox {
+    padding: 20px 40px 20px 20px;
+  }
+
+
+}
+
+@media screen and (max-width:768px) {
+  .ProfileBox {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .Avatar {
+    width: 70%;
+  }
+
+  .Logout {
+    /* right: 20%;
+    top: 5%;
+    width: 30px;
+    height: 30px;
+    font-size: 30px; */
+  }
+
+  .InfoContainer {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .InfoBox,
+  .HistoryBox {
+    width: 100%;
+    /* height: auto; */
+    padding: 20px;
+    max-height: fit-content;
+    overflow-y: visible;
+  }
+
+  .Title {
+    margin: 20px 0;
+  }
+
+  .HistoryBox {
+    /* align-self: flex-start; */
+    /* padding: 40px; */
+
+    align-self: center;
+  }
+
+
+
+  .Balance {
+    font-size: 24px;
+  }
+
+  .InfoList,
+  .ChangeList {
+    font-size: 16px;
+  }
+
+
+  .AddressBox {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .ShowAddress {
+    width: 100%;
+  }
+
+  .InputAddress {
+    width: 90%;
+    height: fit-content;
+  }
+
+}

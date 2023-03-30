@@ -1,0 +1,44 @@
+.ProductList {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.ProductItem {
+  width: 33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+  margin: 40px 0;
+}
+
+.ProductItem a {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+
+
+@media screen and (max-width:769px) {
+  .ProductItem {
+    width: 48%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 40px 0;
+  }
+}
+
+@media screen and (max-width:481px) {
+  .ProductItem {
+    width: 95%;
+  }
+}

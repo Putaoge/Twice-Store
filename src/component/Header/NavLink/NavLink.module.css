@@ -1,0 +1,99 @@
+.Link {
+  font-size: 16px;
+  cursor: pointer;
+  transition: .2s;
+  color: #ee61a2;
+}
+
+.Link:hover {
+  color: #000;
+}
+
+.PcNavList {
+  float: left;
+  display: flex;
+  gap: 30px;
+}
+
+.MobileBox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 280px;
+  z-index: 100;
+  background-color: #000;
+  display: none;
+  animation: show 0.25s 1 ease-in-out;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+
+@keyframes show {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+.MobileBoxLeave {
+  animation: leave 0.25s 1 ease-in-out;
+}
+
+@keyframes leave {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.MobileNavList {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.Exit {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  text-align: center;
+  color: #ee61a2;
+}
+
+
+
+@media screen and (max-width:1200px) {
+  .PcNavList {
+    display: none;
+  }
+
+  .MobileBox {
+    display: flex;
+  }
+
+  .Link {
+    font-size: 28px;
+    cursor: pointer;
+    transition: .2s;
+    color: #ee61a2;
+  }
+
+  .Link:hover {
+    color: #fff;
+  }
+}

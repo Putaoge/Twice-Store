@@ -1,0 +1,30 @@
+.Footer{
+  margin: 50px 0;
+}
+
+.IconList{
+  display: flex;
+  width: 30%;
+  margin: 120px auto 60px;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.IconList li{
+  max-width:30px;
+  /* font-size: 20px; */
+  width: 13%;
+}
+.IconList li a{
+  font-size: 30px;
+}
+.IconList li svg{
+  transition: .2s;
+}
+.IconList li:hover svg{
+  color: #ee61a2;
+}
+
+.Mark{
+  text-align: center;
+}

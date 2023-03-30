@@ -1,0 +1,14 @@
+
+.Title{
+  font-weight: 900;
+  width: 90%;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.Price{
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.6;
+}
