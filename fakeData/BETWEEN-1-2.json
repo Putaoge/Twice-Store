@@ -1,0 +1,72 @@
+[
+  {
+    "title": "BETWEEN 1&2 Complete ver. (Not Signed)",
+    "price": "$28.00",
+    "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/cover_A_344x.png?v=1661486457",
+    "soldout": false,
+    "limit": 6,
+    "cartMessage": [
+      "DIGITAL DOWNLOAD OF \"BETWEEN 1&2 Complete ver. (Not Signed)\" WILL BE DELIVERED VIA EMAIL UPON PURCHASE.",
+      "DIGITAL DOWNLOADS ARE ONLY AVAILABLE TO U.S. CUSTOMERS.",
+      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES.",
+      "*LIMIT OF 6 PER CUSTOMER."
+    ],
+    "dirname": "BETWEEN-1-2"
+  },
+  {
+    "title": "BETWEEN 1&2 Cryptography ver. (Not Signed)",
+    "price": "$28.00",
+    "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/cover_C_344x.png?v=1661486493",
+    "soldout": false,
+    "limit": 2,
+    "cartMessage": [
+      "DIGITAL DOWNLOAD OF \"BETWEEN 1&2 Cryptography ver. (Not Signed)\" WILL BE DELIVERED VIA EMAIL UPON PURCHASE.",
+      "DIGITAL DOWNLOADS ARE ONLY AVAILABLE TO U.S. CUSTOMERS.",
+      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES.",
+      "*LIMIT OF 2 PER CUSTOMER."
+    ],
+    "dirname": "BETWEEN-1-2"
+  },
+  {
+    "title": "BETWEEN 1&2 Pathfinder ver. (Not Signed)",
+    "price": "$28.00",
+    "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/cover_B_344x.png?v=1661486523",
+    "soldout": false,
+    "limit": 7,
+    "cartMessage": [
+      "DIGITAL DOWNLOAD OF \"BETWEEN 1&2 Pathfinder ver. (Not Signed)\" WILL BE DELIVERED VIA EMAIL UPON PURCHASE.",
+      "DIGITAL DOWNLOADS ARE ONLY AVAILABLE TO U.S. CUSTOMERS.",
+      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES.",
+      "*LIMIT OF 7 PER CUSTOMER."
+    ],
+    "dirname": "BETWEEN-1-2"
+  },
+  {
+    "title": "BETWEEN 1&2 Archive ver. (Not Signed)",
+    "price": "$28.00",
+    "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/cover_D_344x.png?v=1661486418",
+    "soldout": false,
+    "limit": 3,
+    "cartMessage": [
+      "DIGITAL DOWNLOAD OF \"BETWEEN 1&2 Archive ver. (Not Signed)\" WILL BE DELIVERED VIA EMAIL UPON PURCHASE.",
+      "DIGITAL DOWNLOADS ARE ONLY AVAILABLE TO U.S. CUSTOMERS.",
+      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES.",
+      "*LIMIT OF 3 PER CUSTOMER."
+    ],
+    "dirname": "BETWEEN-1-2"
+  },
+  {
+    "title": "Between 1&2 Digital Album",
+    "price": "$7.00",
+    "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/Between1_2DigitalAlbumArt_344x.png?v=1661194732",
+    "soldout": false,
+    "limit": 8,
+    "cartMessage": [
+      "DIGITAL DOWNLOAD OF \"Between 1&2 Digital Album\" WILL BE DELIVERED VIA EMAIL UPON PURCHASE.",
+      "DIGITAL DOWNLOADS ARE ONLY AVAILABLE TO U.S. CUSTOMERS.",
+      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES.",
+      "*LIMIT OF 8 PER CUSTOMER."
+    ],
+    "dirname": "BETWEEN-1-2"
+  }
+]
