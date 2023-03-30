@@ -4,12 +4,11 @@
     "price": "$7.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/NayeonDigital_344x.png?v=1653315149",
     "soldout": false,
-    "limit": 3,
+    "limit": 34,
     "cartMessage": [
       "DIGITAL DOWNLOAD OF \"IM NAYEON Digital Album\" WILL BE DELIVERED VIA EMAIL UPON PURCHASE.",
       "DIGITAL DOWNLOADS ARE ONLY AVAILABLE TO U.S. CUSTOMERS.",
-      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES.",
-      "*LIMIT OF 3 PER CUSTOMER."
+      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES."
     ],
     "dirname": "NAYEON"
   },
@@ -18,12 +17,11 @@
     "price": "$28.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/IM_344x.png?v=1656043257",
     "soldout": false,
-    "limit": 3,
+    "limit": 60,
     "cartMessage": [
       "DIGITAL DOWNLOAD OF \"IM NAYEON I'M Ver. (Not signed)\" WILL BE DELIVERED VIA EMAIL UPON PURCHASE.",
       "DIGITAL DOWNLOADS ARE ONLY AVAILABLE TO U.S. CUSTOMERS.",
-      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES.",
-      "*LIMIT OF 3 PER CUSTOMER."
+      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES."
     ],
     "dirname": "NAYEON"
   },
@@ -32,12 +30,11 @@
     "price": "$28.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/NA_344x.png?v=1656043282",
     "soldout": false,
-    "limit": 9,
+    "limit": 30,
     "cartMessage": [
       "DIGITAL DOWNLOAD OF \"IM NAYEON NA Ver. (Not signed)\" WILL BE DELIVERED VIA EMAIL UPON PURCHASE.",
       "DIGITAL DOWNLOADS ARE ONLY AVAILABLE TO U.S. CUSTOMERS.",
-      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES.",
-      "*LIMIT OF 9 PER CUSTOMER."
+      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES."
     ],
     "dirname": "NAYEON"
   },
@@ -46,12 +43,11 @@
     "price": "$28.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/YEON_344x.png?v=1656043341",
     "soldout": false,
-    "limit": 9,
+    "limit": 46,
     "cartMessage": [
       "DIGITAL DOWNLOAD OF \"IM NAYEON YEON Ver. (Not Signed)\" WILL BE DELIVERED VIA EMAIL UPON PURCHASE.",
       "DIGITAL DOWNLOADS ARE ONLY AVAILABLE TO U.S. CUSTOMERS.",
-      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES.",
-      "*LIMIT OF 9 PER CUSTOMER."
+      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES."
     ],
     "dirname": "NAYEON"
   },
@@ -60,12 +56,11 @@
     "price": "$28.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/POP_344x.png?v=1656043313",
     "soldout": false,
-    "limit": 2,
+    "limit": 53,
     "cartMessage": [
       "DIGITAL DOWNLOAD OF \"IM NAYEON POP Ver. (Not Signed)\" WILL BE DELIVERED VIA EMAIL UPON PURCHASE.",
       "DIGITAL DOWNLOADS ARE ONLY AVAILABLE TO U.S. CUSTOMERS.",
-      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES.",
-      "*LIMIT OF 2 PER CUSTOMER."
+      "DIGITAL DOWNLOADS ARE DELIVERED AS MP3 44.1KHZ/24-BIT AUDIO FILES."
     ],
     "dirname": "NAYEON"
   }
