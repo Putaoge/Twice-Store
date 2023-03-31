@@ -50,7 +50,8 @@
   }
 }
 
-.Exit,.Trash {
+.Exit,
+.Trash {
   cursor: pointer;
   /* position: absolute;
   right: 0px;
@@ -63,17 +64,19 @@
   text-align: center;
   transition: .3s;
 }
-.Exit:hover{
-  transform: rotate3d(0,0,1,90deg);
+
+.Exit:hover {
+  transform: rotate3d(0, 0, 1, 90deg);
 }
 
-.Trash{
+.Trash {
   font-size: 20px;
   width: 30px;
   height: 30px;
   line-height: 30px;
 }
-.Trash:hover{
+
+.Trash:hover {
   color: #000;
 }
 
@@ -91,7 +94,7 @@
 
 
 
-.CartList{
+.CartList {
   max-height: 70%;
   padding: 10px;
   overflow-y: auto;
@@ -99,10 +102,10 @@
 }
 
 
-.Footer{
-  position: absolute;
-  bottom: 40px;
-  left: 0;
+.Footer {
+  /* position: absolute; */
+  /* bottom: 40px; */
+  /* left: 0; */
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -111,7 +114,7 @@
 }
 
 
-.Price{
+.Price {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -127,7 +130,8 @@
   -webkit-text-size-adjust: 100%;
 
 }
-.TotalPrice{
+
+.TotalPrice {
   color: #fff;
   font-weight: 700;
   font-size: 24px;
@@ -162,14 +166,20 @@
 
 @media screen and (max-width:1200px) {
   .CartBox {
-      right: 0px;
-    }
+    right: 0px;
+  }
+}
+
+@media screen and (max-width:769px) {
+  .CartList {
+    max-height: 60%;
+  }
 }
 
 @media screen and (max-width:481px) {
   .CartBox {
 
-      right: 0px;
-      width: 100%;
-    }
+    right: 0px;
+    width: 100%;
+  }
 }

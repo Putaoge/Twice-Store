@@ -1,12 +1,22 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import HistoryInnerItem from './HistoryInnerItem/HistoryInnerItem';
 import styles from './HistoryItem.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
+import Confirm from '../../../Header/Cart/CartPage/Comfirm/Confirm';
+import { animationTime } from '../../../../Api/data';
+import { useDispatch } from 'react-redux';
+import { removeOrder } from '../../../../store/UserSlice';
+
 
 const HistoryItem = ({ data }) => {
   // console.log('data: ', data);
   const radio = useRef(null)
+  const [leaveAnimation, setLeaveAnimation] = useState(false)
+  const [showConfirm, setShowConfirm] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+
+  const dispatch = useDispatch()
 
   /* 
     {
@@ -33,9 +43,39 @@ const HistoryItem = ({ data }) => {
   }
   */
 
+  // 取消
+  const cancelFn = () => {
+    setShowConfirm(false)
+  }
+
   // 播放
   const playmedia = () => {
     radio.current.play()
+  }
+
+  const toggleCancel = () => {
+    if (isLoading) return;
+
+    setIsLoading(true)
+
+    if (showConfirm) {
+      setLeaveAnimation(true)
+      setTimeout(() => {
+        setLeaveAnimation(false)
+        setIsLoading(false)
+        setShowConfirm(false)
+
+      }, animationTime);
+    } else {
+      setShowConfirm(true)
+      setTimeout(() => {
+        setIsLoading(false)
+      }, animationTime);
+    }
+  }
+
+  const confirmFn = ()=>{
+    dispatch(removeOrder(data))
   }
 
   return (
@@ -57,6 +97,16 @@ const HistoryItem = ({ data }) => {
       <p className={styles.Address}>
         收件地址: <br /> {data.address}
       </p>
+      <div
+        className={styles.CancelOrder}
+        onClick={toggleCancel}
+      >
+        取消訂單
+        {
+          showConfirm ? <Confirm cancelFn={cancelFn} confirmFn={confirmFn} text={'即將刪除訂單, 是否確認?'} isLeave={leaveAnimation} /> : null
+        }
+      </div>
+
       <audio src={data.randomVoice} ref={radio}></audio>
     </li>
   );

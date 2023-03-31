@@ -12,7 +12,7 @@ const Home = () => {
     // 開發路徑
     // fetch(`/fakeData/home.json`).then(res => res.json())
       // 生產路徑
-      fetch(`./fakeData/home.json`).then(res => res.json())
+      fetch(`./fakeData/HOME.json`).then(res => res.json())
       .then(data => {
         console.log('data: ', data);
         setProductData(data)

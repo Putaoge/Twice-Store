@@ -1,58 +1,90 @@
-.ItemBox{
+.ItemBox {
   position: relative;
   box-shadow: 0 0 7px 2px #0000002b;
-  
+
   border-radius: 5px;
   padding: 20px 10px;
   display: flex;
   flex-flow: column nowrap;
 }
-.PlaySoundBtn{
+
+.PlaySoundBtn {
   position: absolute;
   right: 10px;
   top: 10px;
   text-align: center;
-  transform: rotate3d(0,0,1,-10deg);
+  transform: rotate3d(0, 0, 1, -10deg);
   font-size: 30px;
   cursor: pointer;
   color: #ee61a2;
 }
-.PlaySoundBtn:hover{
+
+.PlaySoundBtn:hover {
   animation: shake 1s infinite;
 }
+
 @keyframes shake {
-  0%{
+  0% {
     transform: rotate3d(0, 0, 1, -10deg);
   }
-  10%{
+
+  10% {
     transform: rotate3d(0, 0, 1, -20deg);
   }
-  20%{
+
+  20% {
     transform: rotate3d(0, 0, 1, -10deg);
   }
-  30%{
+
+  30% {
     transform: rotate3d(0, 0, 1, -20deg);
   }
-  40%{
+
+  40% {
     transform: rotate3d(0, 0, 1, -10deg);
   }
-  50%{
+
+  50% {
     transform: rotate3d(0, 0, 1, -20deg);
   }
-  60%{
+
+  60% {
     transform: rotate3d(0, 0, 1, -10deg);
   }
 }
 
-.Time{
+.Time {
   line-height: 1.4;
   font-size: 14px;
 }
 
-.ItemList{
+.ItemList {
   margin-bottom: 20px;
 }
 
-.Address{
+.Address {
   line-height: 1.4;
+}
+
+.CancelOrder {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 900;
+  width: 50%;
+  align-self: center;
+  color: #fff;
+  background-color: #000;
+  transition: .3s;
+  cursor: pointer;
+  line-height: 26px;
+
+  margin: 40px 0 20px;
+  user-select: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.CancelOrder:hover {
+  background-color: #ee61a2;
 }

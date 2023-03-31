@@ -53,6 +53,13 @@
   margin: 20px 0;
 }
 
+.LimitInfo{
+  font-weight: 700;
+  color: #ee61a2;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
 @media screen and (max-width:769px) {
   .ProductBox{
     flex-flow: column nowrap;

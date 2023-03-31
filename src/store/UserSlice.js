@@ -371,12 +371,12 @@ const UserSlice = createSlice({
         cart: state.cart
       }
 
-      let total = newCart.reduce((sum, curr)=>{
+      let total = newCart.reduce((sum, curr) => {
         let currTotal = +(+curr.price.replace('$', '') * curr.amount).toFixed(2)
         return sum + currTotal
-      },0)
+      }, 0)
 
-        state.cart = newCart
+      state.cart = newCart
 
       state.user = payload
       state.history = payload.history
@@ -460,6 +460,65 @@ const UserSlice = createSlice({
 
     },
 
+    // 刪除訂單
+    removeOrder: (state, { payload }) => {
+      console.log('payload: ', payload);
+      /* 
+        {
+          "product": [
+              {
+                  "title": "MORE & MORE T-SHIRT",
+                  "price": "$35.00",
+                  "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/More-More-Replace-Back_344x.png?v=1590983693",
+                  "soldout": false,
+                  "limit": 8,
+                  "cartMessage": [
+                      "\"MORE & MORE T-SHIRT\"",
+                      "*LIMIT OF 8 PER CUSTOMER."
+                  ],
+                  "dirname": "MERCHANDISE-ACCESSORIES",
+                  "amount": 8,
+                  "path": "/shop/MORE-MORE/MORE%20&%20MORE%20T-SHIRT"
+              }
+          ],
+          "address": "韩国首爾特別市江東區江東大路205號（城內洞448-13,JYP Center大樓）",
+          "date": "2023/3/31 上午5:16:46",
+          "total": 280,
+          "randomVoice": "./voice/8.채영_허허이.wav"
+        }
+      */
+      // let index;
+      // state.history.findOne((item, historyIndex)=>{
+      //   if (item.date === payload.date){
+      //     index = 
+      //   }
+      // })
+
+      // 刪除購買記錄
+      state.history = state.history.filter(item=>item.date!==payload.date)
+      // 減掉limit記錄
+
+      payload.product.forEach((item,index)=>{
+        let product = state.user.userLimitHistory.find((hisroty, hisrotyIndex)=>{
+          return hisroty.title === item.title;
+        })
+        product.amount -= item.amount
+      })
+      
+      
+
+      console.log('state.history: ', JSON.parse(JSON.stringify(state.history)));
+      state.user = {
+        ...state.user,
+        history: state.history,
+        balance: state.user.balance + payload.total
+      }
+      localStorage.setItem('user', JSON.stringify(state.user))
+      localStorage.setItem(state.user.username, JSON.stringify(state.user))
+
+    },
+
+    // 修改用戶信息
     changeUserInfo: (state, { payload }) => {
       // console.log('payload: ', payload);
       let {
@@ -491,6 +550,7 @@ const UserSlice = createSlice({
 
     },
 
+    // 登出
     logout: (state) => {
 
       localStorage.removeItem('user')
@@ -504,7 +564,9 @@ const UserSlice = createSlice({
       state.total = 0;
       state.user = null;
       state.history = [];
-    }
+    },
+
+
 
 
 
@@ -531,6 +593,7 @@ export const {
   secondLogin,
   resetCart,
   addOrder,
+  removeOrder,
   changeUserInfo,
   logout
 } = UserSlice.actions

@@ -2,8 +2,8 @@ import React, { forwardRef, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faTrash } from '@fortawesome/free-solid-svg-icons';
 import styles from './CartPage.module.css'
-import { useSelector } from 'react-redux';
-import { getCartInfo, getTotalPrice, getUserInfo } from '../../../../store/UserSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCartInfo, getTotalPrice, getUserInfo, resetCart } from '../../../../store/UserSlice';
 import { animationTime } from '../../../../Api/data';
 
 import CartItem from './CartItem/CartItem';
@@ -18,6 +18,8 @@ const CartPage = React.forwardRef((props, ref) => {
   const cartInfo = useSelector(getCartInfo)
   // console.log('cartInfo: ', cartInfo);
   const totalPrice = useSelector(getTotalPrice)
+
+  const dispatch = useDispatch()
 
   // 是否登入
   // const loginStorage = JSON.parse(localStorage.getItem('user'))
@@ -102,6 +104,9 @@ const CartPage = React.forwardRef((props, ref) => {
     setShowConfirm(false)
     props.setEvent()
   }
+  const confirmFn = ()=>{
+    dispatch(resetCart)
+  }
 
   // 下單後
   const successClose = ()=>{
@@ -139,7 +144,7 @@ const CartPage = React.forwardRef((props, ref) => {
         >
           <FontAwesomeIcon icon={faTrash} />
           {
-            showConfirm && <Confirm cancelFn={cancelFn} isLeave={leaveAnimation} />
+            showConfirm && <Confirm cancelFn={cancelFn} text={'即將清空購物車, 是否確認?'} isLeave={leaveAnimation} confirmFn={confirmFn} />
           }
         </div>
 

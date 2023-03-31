@@ -20,7 +20,7 @@ const ProductPage = () => {
     // 生產路徑
     fetch(`./fakeData/${option}.json`).then(res => res.json())
       .then(data => {
-        // console.log('data: ', data);
+        console.log('data: ', data);
         setProductData(data)
         setIsLoading(false)
       })

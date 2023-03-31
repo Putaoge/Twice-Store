@@ -1,73 +1,73 @@
 [
   {
-    "title": "TWICE COLLAGE T-SHIRT",
+    "title": "TWICE COLLAGE T-SHIRT *EXTRA",
     "price": "$35.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/Collage-Tee-Back_344x.png?v=1590681217",
     "soldout": false,
-    "limit": 3,
+    "limit": 27,
     "cartMessage": [
-      "\"TWICE COLLAGE T-SHIRT\"",
-      "*LIMIT OF 3 PER CUSTOMER."
+      "* TWICE COLLAGE T-SHIRT *EXTRA",
+      "EXTRA VERSION"
     ],
     "dirname": "MERCHANDISE-ACCESSORIES"
   },
   {
-    "title": "MORE & MORE T-SHIRT",
+    "title": "MORE & MORE T-SHIRT *EXTRA",
     "price": "$35.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/More-More-Replace-Back_344x.png?v=1590983693",
     "soldout": false,
-    "limit": 9,
+    "limit": 52,
     "cartMessage": [
-      "\"MORE & MORE T-SHIRT\"",
-      "*LIMIT OF 9 PER CUSTOMER."
+      "* MORE & MORE T-SHIRT *EXTRA",
+      "EXTRA VERSION"
     ],
     "dirname": "MERCHANDISE-ACCESSORIES"
   },
   {
-    "title": "TWICE TONAL CROP T-SHIRT",
+    "title": "TWICE TONAL CROP T-SHIRT *EXTRA",
     "price": "$40.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/Tonal-Crop-Tee-Front_344x.png?v=1590612799",
     "soldout": false,
-    "limit": 9,
+    "limit": 31,
     "cartMessage": [
-      "\"TWICE TONAL CROP T-SHIRT\"",
-      "*LIMIT OF 9 PER CUSTOMER."
+      "* TWICE TONAL CROP T-SHIRT *EXTRA",
+      "EXTRA VERSION"
     ],
     "dirname": "MERCHANDISE-ACCESSORIES"
   },
   {
-    "title": "Twice Bucket Hat",
+    "title": "Twice Bucket Hat *EXTRA",
     "price": "$35.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/Twice-Bucket-Hat-Front_344x.png?v=1590535393",
     "soldout": false,
-    "limit": 1,
+    "limit": 56,
     "cartMessage": [
-      "\"Twice Bucket Hat\"",
-      "*LIMIT OF 1 PER CUSTOMER."
+      "* Twice Bucket Hat *EXTRA",
+      "EXTRA VERSION"
     ],
     "dirname": "MERCHANDISE-ACCESSORIES"
   },
   {
-    "title": "TWICE ENAMEL KEYCHAIN",
+    "title": "TWICE ENAMEL KEYCHAIN *EXTRA",
     "price": "$18.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/Keychain_344x.png?v=1590538591",
     "soldout": false,
-    "limit": 10,
+    "limit": 59,
     "cartMessage": [
-      "\"TWICE ENAMEL KEYCHAIN\"",
-      "*LIMIT OF 10 PER CUSTOMER."
+      "* TWICE ENAMEL KEYCHAIN *EXTRA",
+      "EXTRA VERSION"
     ],
     "dirname": "MERCHANDISE-ACCESSORIES"
   },
   {
-    "title": "TWICE STICKER PACK",
+    "title": "TWICE STICKER PACK *EXTRA",
     "price": "$15.00",
     "picPath": "https://cdn.shopify.com/s/files/1/0267/1371/8831/products/Sticker-Pack_344x.png?v=1590537255",
     "soldout": false,
-    "limit": 4,
+    "limit": 47,
     "cartMessage": [
-      "\"TWICE STICKER PACK\"",
-      "*LIMIT OF 4 PER CUSTOMER."
+      "* TWICE STICKER PACK *EXTRA",
+      "EXTRA VERSION"
     ],
     "dirname": "MERCHANDISE-ACCESSORIES"
   }

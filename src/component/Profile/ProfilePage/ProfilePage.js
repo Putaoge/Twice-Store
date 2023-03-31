@@ -55,6 +55,9 @@ const ProfilePage = ({ handlerClose, isLeave }) => {
     address: userInfo.address
   })
 
+  // 要更改的用戶名是否被註冊過
+  const [isSigned, setIsSigned] = useState(false)
+
   // console.log('newInfo: ', newInfo);
 
 
@@ -75,6 +78,7 @@ const ProfilePage = ({ handlerClose, isLeave }) => {
   // 點擊更改
   const handlerChangeInfo = () => {
     setOnChange(prev => !prev)
+    setIsSigned(false)
     setNewInfo({
       username: userInfo.username,
       password: userInfo.password,
@@ -86,18 +90,22 @@ const ProfilePage = ({ handlerClose, isLeave }) => {
   // 確實修改了
   const handlerUsername = (e) => setNewInfo(prev => {
     setDidChange(true)
+    setIsSigned(false)
     return { ...prev, username: e.target.value.trim() }
   })
   const handlerPassword = (e) => setNewInfo(prev => {
     setDidChange(true)
+    setIsSigned(false)
     return { ...prev, password: e.target.value.trim() }
   })
   const handlerNickname = (e) => setNewInfo(prev => {
     setDidChange(true)
+    setIsSigned(false)
     return { ...prev, nickname: e.target.value }
   })
   const handlerAddress = (e) => setNewInfo(prev => {
     setDidChange(true)
+    setIsSigned(false)
     return { ...prev, address: e.target.value }
   })
 
@@ -106,6 +114,20 @@ const ProfilePage = ({ handlerClose, isLeave }) => {
     // newInfo
     // console.log('newInfo: ', newInfo);
     if (didChange) {
+      if (newInfo.username !== userInfo.username) {
+        let bol = localStorage.getItem(newInfo.username)
+        // 查找緩存中是否有這個帳號
+        if (bol) {
+          // 已經有了這個帳號
+          setIsSigned(true)
+          setNewInfo(prev => {
+            return { ...prev, username: '用戶名已存在' }
+          })
+          return;
+        }
+      }
+
+      // 沒問題, 提交更改
       dispatch(changeUserInfo(newInfo))
       handlerChangeInfo()
     }
@@ -146,7 +168,7 @@ const ProfilePage = ({ handlerClose, isLeave }) => {
     <ul className={styles.ChangeList}>
       <li>
         <label htmlFor='username' className={styles.Desc}>用戶名:</label>
-        <input type="text" id='username' placeholder={userInfo.username} className={styles.InfoInput}
+        <input type="text" id='username' placeholder={userInfo.username} className={`${styles.InfoInput} ${isSigned ? styles.isSignedInfo : ''}`}
           value={newInfo.username}
           onChange={handlerUsername}
         />

@@ -93,10 +93,6 @@ const Login = ({ handlerClose, cancelLogin, isLeave }) => {
     }
     // 開啟離開動畫效果
     leavePage()
-
-
-
-
   }
 
 

@@ -95,6 +95,7 @@ const Shop = () => {
                       )
                     })
                   }
+                  <li>*LIMIT OF <span className={styles.LimitInfo}>{productData.limit}</span> PER CUSTOMER.</li>
                 </ul>
               </article>
 

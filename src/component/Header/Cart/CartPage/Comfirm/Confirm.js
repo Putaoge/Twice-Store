@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { resetCart } from '../../../../../store/UserSlice';
 import { animationTime } from '../../../../../Api/data';
 
-const Confirm = ({ cancelFn, isLeave }) => {
+const Confirm = ({ cancelFn, confirmFn, isLeave, text }) => {
 
   const dispatch = useDispatch()
 
@@ -16,7 +16,7 @@ const Confirm = ({ cancelFn, isLeave }) => {
     setLeaveAnimation(true)
     setTimeout(() => {
       cancelFn()
-      dispatch(resetCart())
+      confirmFn()
     }, animationTime);
   }
 
@@ -39,7 +39,7 @@ const Confirm = ({ cancelFn, isLeave }) => {
     <Backdrop>
       <div className={`${styles.ConfirmBox} ${leaveAnimation ? styles.BoxLeave : ''}`} onClick={(e) => e.stopPropagation()} style={{ animationDuration: animationTime / 1000 + 's' }} >
         <p className={styles.Title}>
-          即將清空購物車, 是否確認?
+          {text}
         </p>
         <div className={styles.BtnBox}>
           <button
