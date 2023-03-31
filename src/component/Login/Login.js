@@ -61,7 +61,7 @@ const Login = ({ handlerClose, cancelLogin, isLeave }) => {
     }
 
     // 搜索是否存在用戶
-    let bol = JSON.parse(localStorage.getItem(username))
+    let bol = JSON.parse(localStorage.getItem('twice_store_' + username))
     // console.log('bol: ', bol);
     // 不存在用戶
     if (!bol) {
@@ -78,7 +78,7 @@ const Login = ({ handlerClose, cancelLogin, isLeave }) => {
 
     // 存在用戶且密碼正確
     // 在localStorage中存入user (當前使用者)
-    // localStorage.setItem('user', JSON.stringify(bol))
+    // localStorage.setItem('twice_store_user', JSON.stringify(bol))
 
     // 如果是第一次登入, 需要存儲設置用戶信息
     if (!bol.balance) {
@@ -110,7 +110,7 @@ const Login = ({ handlerClose, cancelLogin, isLeave }) => {
     用戶名, 密碼, 購物車內容
     同時存儲到user裡面
     */
-    let bol = localStorage.getItem(signName)
+    let bol = localStorage.getItem('twice_store_' + signName)
     if (bol) {
       setUserExit(true)
       return
@@ -126,7 +126,7 @@ const Login = ({ handlerClose, cancelLogin, isLeave }) => {
     }
     // console.log('data: ', data);
     // 存入localStorage
-    localStorage.setItem(signName, JSON.stringify(data))
+    localStorage.setItem('twice_store_' + signName, JSON.stringify(data))
 
     // 註冊成功
     setSignSuccess(true)

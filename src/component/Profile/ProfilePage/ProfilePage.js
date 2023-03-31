@@ -115,7 +115,7 @@ const ProfilePage = ({ handlerClose, isLeave }) => {
     // console.log('newInfo: ', newInfo);
     if (didChange) {
       if (newInfo.username !== userInfo.username) {
-        let bol = localStorage.getItem(newInfo.username)
+        let bol = localStorage.getItem('twice_store_' +newInfo.username)
         // 查找緩存中是否有這個帳號
         if (bol) {
           // 已經有了這個帳號

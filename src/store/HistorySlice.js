@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-const localInfo = JSON.parse(localStorage.getItem('user'))
+const localInfo = JSON.parse(localStorage.getItem('twice_store_user'))
 let data;
 if (localInfo) {
   data = {
@@ -48,7 +48,7 @@ const HistorySlice = createSlice({
         total: payload.total
       })
 
-      let userInfo = JSON.parse(localStorage.getItem('user'))
+      let userInfo = JSON.parse(localStorage.getItem('twice_store_user'))
       // console.log('userInfo: ', userInfo);
       let newInfo = {
         ...userInfo,
@@ -56,7 +56,7 @@ const HistorySlice = createSlice({
       }
 
       // 更新歷史記錄信息
-      localStorage.setItem('user', JSON.stringify(newInfo))
+      localStorage.setItem('twice_store_user', JSON.stringify(newInfo))
       localStorage.setItem(userInfo.username, JSON.stringify(newInfo))
 
     }

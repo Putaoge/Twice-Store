@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { memberAvatarArr, randomVoice } from "../Api/data";
 
-const localInfo = JSON.parse(localStorage.getItem('user'))
+const localInfo = JSON.parse(localStorage.getItem('twice_store_user'))
 let data;
 if (localInfo) {
   // // console.log('localInfo: ', localInfo);
@@ -114,7 +114,7 @@ const UserSlice = createSlice({
       }
 
       // 添加至內存
-      let localUser = JSON.parse(localStorage.getItem('user'))
+      let localUser = JSON.parse(localStorage.getItem('twice_store_user'))
       if (localUser) {
         // // console.log('localUser: ', localUser);
         let newUserInfo = {
@@ -122,8 +122,8 @@ const UserSlice = createSlice({
           cart: state.cart
         }
         // console.log('newUserInfo: ', newUserInfo);
-        localStorage.setItem('user', JSON.stringify(newUserInfo))
-        localStorage.setItem(newUserInfo.username, JSON.stringify(newUserInfo))
+        localStorage.setItem('twice_store_user', JSON.stringify(newUserInfo))
+        localStorage.setItem('twice_store_'+newUserInfo.username, JSON.stringify(newUserInfo))
       }
 
     },
@@ -153,7 +153,7 @@ const UserSlice = createSlice({
       state.total = +state.total.toFixed(2)
 
       // 添加至內存
-      let localUser = JSON.parse(localStorage.getItem('user'))
+      let localUser = JSON.parse(localStorage.getItem('twice_store_user'))
       if (localUser) {
         // // console.log('localUser: ', localUser);
         let newUserInfo = {
@@ -161,8 +161,8 @@ const UserSlice = createSlice({
           cart: state.cart
         }
         // console.log('newUserInfo: ', newUserInfo);
-        localStorage.setItem('user', JSON.stringify(newUserInfo))
-        localStorage.setItem(newUserInfo.username, JSON.stringify(newUserInfo))
+        localStorage.setItem('twice_store_user', JSON.stringify(newUserInfo))
+        localStorage.setItem('twice_store_' +newUserInfo.username, JSON.stringify(newUserInfo))
       }
     },
     // 清空購物車
@@ -170,7 +170,7 @@ const UserSlice = createSlice({
       state.cart = []
       state.total = 0;
       // 添加至內存
-      let localUser = JSON.parse(localStorage.getItem('user'))
+      let localUser = JSON.parse(localStorage.getItem('twice_store_user'))
       if (localUser) {
         // // console.log('localUser: ', localUser);
         let newUserInfo = {
@@ -178,8 +178,8 @@ const UserSlice = createSlice({
           cart: state.cart
         }
         // console.log('newUserInfo: ', newUserInfo);
-        localStorage.setItem('user', JSON.stringify(newUserInfo))
-        localStorage.setItem(newUserInfo.username, JSON.stringify(newUserInfo))
+        localStorage.setItem('twice_store_user', JSON.stringify(newUserInfo))
+        localStorage.setItem('twice_store_' +newUserInfo.username, JSON.stringify(newUserInfo))
       }
     },
 
@@ -205,8 +205,8 @@ const UserSlice = createSlice({
       // console.log('payload: ', payload);
       // state.user = payload;
       // 為什麼沒設置上
-      localStorage.setItem('user', JSON.stringify(payload))
-      localStorage.setItem(payload.username, JSON.stringify(payload))
+      localStorage.setItem('twice_store_user', JSON.stringify(payload))
+      localStorage.setItem('twice_store_' +payload.username, JSON.stringify(payload))
       state.user = payload
       console.log('設置上了嗎state.user: ', state.user);
       console.log('設置上了嗎payload: ', payload);
@@ -382,8 +382,8 @@ const UserSlice = createSlice({
       state.history = payload.history
       state.total = total
 
-      localStorage.setItem(payload.username, JSON.stringify(payload))
-      localStorage.setItem('user', JSON.stringify(payload))
+      localStorage.setItem('twice_store_' +payload.username, JSON.stringify(payload))
+      localStorage.setItem('twice_store_user', JSON.stringify(payload))
 
     },
 
@@ -444,7 +444,7 @@ const UserSlice = createSlice({
       state.user.balance -= payload.total;
       state.user.balance = + state.user.balance.toFixed(2)
 
-      // let userInfo = JSON.parse(localStorage.getItem('user'))
+      // let userInfo = JSON.parse(localStorage.getItem('twice_store_user'))
       // // console.log('userInfo: ', userInfo);
       let newInfo = {
         ...state.user,
@@ -455,8 +455,8 @@ const UserSlice = createSlice({
 
 
       // 更新歷史記錄信息
-      localStorage.setItem('user', JSON.stringify(newInfo))
-      localStorage.setItem(state.user.username, JSON.stringify(newInfo))
+      localStorage.setItem('twice_store_user', JSON.stringify(newInfo))
+      localStorage.setItem('twice_store_' +state.user.username, JSON.stringify(newInfo))
 
     },
 
@@ -513,8 +513,8 @@ const UserSlice = createSlice({
         history: state.history,
         balance: state.user.balance + payload.total
       }
-      localStorage.setItem('user', JSON.stringify(state.user))
-      localStorage.setItem(state.user.username, JSON.stringify(state.user))
+      localStorage.setItem('twice_store_user', JSON.stringify(state.user))
+      localStorage.setItem('twice_store_' +state.user.username, JSON.stringify(state.user))
 
     },
 
@@ -529,14 +529,14 @@ const UserSlice = createSlice({
       } = payload
 
 
-      let userInfo = JSON.parse(localStorage.getItem('user'))
+      let userInfo = JSON.parse(localStorage.getItem('twice_store_user'))
       let newInfo = {
         ...userInfo,
         ...payload
       }
       localStorage.removeItem(state.user.username)
-      localStorage.setItem(username, JSON.stringify(newInfo))
-      localStorage.setItem('user', JSON.stringify(newInfo))
+      localStorage.setItem('twice_store_' + username, JSON.stringify(newInfo))
+      localStorage.setItem('twice_store_user', JSON.stringify(newInfo))
 
 
       state.user = {
@@ -553,7 +553,7 @@ const UserSlice = createSlice({
     // 登出
     logout: (state) => {
 
-      localStorage.removeItem('user')
+      localStorage.removeItem('twice_store_user')
       // state = {
       //   cart: [],
       //   total: 0,

@@ -97,3 +97,33 @@
     color: #fff;
   }
 }
+
+@media screen and (max-width:576px) {
+
+
+  .MobileBox {
+    width: 100%;
+    max-width: 100%;
+  }
+  .MobileNavList{
+    padding: 80px;
+    text-align: center;
+    gap: 40px;
+  }
+
+}
+@media screen and (max-width:375px) {
+
+
+  .MobileBox {
+    width: 100%;
+    max-width: 100%;
+  }
+  .MobileNavList{
+    padding: 20px;
+    text-align: center;
+    gap: 20px;
+  }
+
+}
+
