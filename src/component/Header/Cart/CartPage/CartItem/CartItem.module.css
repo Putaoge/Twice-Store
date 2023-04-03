@@ -42,3 +42,16 @@
 .Title:hover,.ProductImg:hover{
   opacity: .6;
 }
+
+
+
+@media screen and (max-width:300px) {
+  .Title,
+    .Price {
+      width: 100%;
+      font-weight: 700;
+      font-size: 16px;
+      word-wrap: break-word;
+      margin-bottom: 10px;
+    }
+}

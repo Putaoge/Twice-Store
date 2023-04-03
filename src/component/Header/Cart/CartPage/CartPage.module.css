@@ -183,3 +183,15 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width:300px) {
+  .Title {
+    font-size: 18px;
+  }
+  
+
+  .Btn {
+    font-size: 14px;
+    line-height: 36px;
+  }
+}

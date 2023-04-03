@@ -30,7 +30,7 @@ const UserSlice = createSlice({
 
     // 添加購物車商品
     addProduct: (state, { payload }) => {
-      console.log('payload: ', payload);
+      // console.log('payload: ', payload);
       // state.cart
       // console.log('state.cart: ', JSON.parse(JSON.stringify(state.cart)) );
 
@@ -67,13 +67,13 @@ const UserSlice = createSlice({
           })
 
           if (payload.productNum + preAmount + cartNum >= payload.productData.limit) {
-            console.log('payload.productNum: ', payload.productNum);
-            console.log('cartNum: ', cartNum);
-            console.log('preAmount: ', preAmount);
+            // console.log('payload.productNum: ', payload.productNum);
+            // console.log('cartNum: ', cartNum);
+            // console.log('preAmount: ', preAmount);
             // console.log('payload.productNum + preAmount + cartNum: ', payload.productNum + preAmount + cartNum);
             // console.log('我打');
             payload.productNum = payload.productData.limit - preAmount - cartNum
-            console.log('payload.productData.limit: ', payload.productData.limit);
+            // console.log('payload.productData.limit: ', payload.productData.limit);
             // console.log('比对过了payload: ', payload);
           }
         }
@@ -185,7 +185,7 @@ const UserSlice = createSlice({
 
     // 第一次登入
     setUser: (state, { payload }) => {
-      console.log('第一次登入啊 state: ', JSON.parse(JSON.stringify(state.cart)));
+      // console.log('第一次登入啊 state: ', JSON.parse(JSON.stringify(state.cart)));
       // console.log('setUser payload: ', payload);
 
 
@@ -208,15 +208,15 @@ const UserSlice = createSlice({
       localStorage.setItem('twice_store_user', JSON.stringify(payload))
       localStorage.setItem('twice_store_' +payload.username, JSON.stringify(payload))
       state.user = payload
-      console.log('設置上了嗎state.user: ', state.user);
-      console.log('設置上了嗎payload: ', payload);
+      // console.log('設置上了嗎state.user: ', state.user);
+      // console.log('設置上了嗎payload: ', payload);
 
     },
 
     // 登入過了
     secondLogin: (state, { payload }) => {
       // payload是localStorage裡面存的用戶信息
-      console.log('登入過了, payload: ', payload);
+      // console.log('登入過了, payload: ', payload);
       /* 
 
       */
@@ -285,7 +285,7 @@ const UserSlice = createSlice({
           return historyProduct.title === item.title
         })
 
-        console.log('historyBol: ', historyBol); // undefined
+        // console.log('historyBol: ', historyBol); // undefined
         // console.log('index: ', index); // index:  0 可以獲取到
         if (bol && historyBol) {
           // console.log('bol: ', bol);
@@ -294,11 +294,11 @@ const UserSlice = createSlice({
 
           // if (historyBol){
           //   // 我買過這個東西
-          console.log('我買過這個東西: ', `我買過這個東西`);
+          // console.log('我買過這個東西: ', `我買過這個東西`);
 
           // 控制上限
           if (item.amount + bol.amount + historyBol.amount >= item.limit) {
-            console.log('超出預算');
+            // console.log('超出預算');
             // item.limit - historyBol.amount 就是能購買的上限
             item.amount = item.limit - historyBol.amount
           } else {
@@ -326,7 +326,7 @@ const UserSlice = createSlice({
           // // console.log('payload.cart: ', payload.cart);
           // 控制上限
           if (item.amount + bol.amount >= item.limit) {
-            console.log('超出預算');
+            // console.log('超出預算');
             // item.limit - historyBol.amount 就是能購買的上限
             item.amount = item.limit
           } else {
@@ -345,7 +345,7 @@ const UserSlice = createSlice({
         } else if (historyBol) {
 
           if (item.amount + historyBol.amount >= item.limit) {
-            console.log('超出預算');
+            // console.log('超出預算');
             // item.limit - historyBol.amount 就是能購買的上限
             item.amount = item.limit - historyBol.amount
           } else {
@@ -462,7 +462,7 @@ const UserSlice = createSlice({
 
     // 刪除訂單
     removeOrder: (state, { payload }) => {
-      console.log('payload: ', payload);
+      // console.log('payload: ', payload);
       /* 
         {
           "product": [
@@ -499,15 +499,15 @@ const UserSlice = createSlice({
       // 減掉limit記錄
 
       payload.product.forEach((item,index)=>{
-        let product = state.user.userLimitHistory.find((hisroty, hisrotyIndex)=>{
-          return hisroty.title === item.title;
+        let product = state.user.userLimitHistory.find((history, historyIndex)=>{
+          return history.title === item.title;
         })
         product.amount -= item.amount
       })
       
       
 
-      console.log('state.history: ', JSON.parse(JSON.stringify(state.history)));
+      // console.log('state.history: ', JSON.parse(JSON.stringify(state.history)));
       state.user = {
         ...state.user,
         history: state.history,

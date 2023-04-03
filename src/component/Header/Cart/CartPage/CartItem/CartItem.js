@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { addProduct, minusProduct } from '../../../../../store/UserSlice';
 import { Link } from 'react-router-dom';
 const CartItem = ({ data }) => {
-  console.log('data: ', data);
+  // console.log('data: ', data);
   const [remain, setRemain] = useState(true)
   const dispatch = useDispatch()
   const handlerAdd = () => {

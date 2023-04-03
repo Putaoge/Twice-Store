@@ -87,7 +87,7 @@ const Login = ({ handlerClose, cancelLogin, isLeave }) => {
       }, animationTime);
     } else {
       // console.log('裡面有')
-      setTimeout(() => {console.log();
+      setTimeout(() => {
         dispatch(secondLogin(bol))
       }, animationTime);
     }

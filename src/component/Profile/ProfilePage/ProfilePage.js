@@ -12,7 +12,7 @@ const ProfilePage = ({ handlerClose, isLeave }) => {
   const [onClose, setOnClose] = useState(false)
   const userInfo = useSelector(getUserInfo)
   const historyOrder = useSelector(getHistoryOrder)
-  console.log('historyOrder: ', historyOrder);
+  // console.log('historyOrder: ', historyOrder);
   const dispatch = useDispatch()
   // console.log('userInfo: ', userInfo);
   /* 

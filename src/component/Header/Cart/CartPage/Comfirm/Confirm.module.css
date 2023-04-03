@@ -5,7 +5,7 @@
   transform: translate3d(-50%, -50%, 0);
   max-width: 360px;
   width: 100%;
-  
+
   height: 150px;
   background-color: #fff;
   border-radius: 10px;
@@ -43,8 +43,8 @@
 .BoxLeave {
   /* animation: box-leave .3s 1 ease-in-out; */
   animation-name: box-leave;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes box-leave {
@@ -61,6 +61,7 @@
 
 .Title {
   font-size: 24px;
+  transition: .3s;
 }
 
 .BtnBox {
@@ -90,4 +91,16 @@
 
 .ConfirmBtn {
   background-color: rgb(255, 50, 50);
+}
+
+
+@media screen and (max-width:300px) {
+  .Title {
+    font-size: 16px;
+  }
+
+  .Btn {
+    font-size: 14px;
+    line-height: 36px;
+  }
 }
